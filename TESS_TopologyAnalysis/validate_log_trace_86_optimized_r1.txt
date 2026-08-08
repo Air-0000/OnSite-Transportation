@@ -1,0 +1,19 @@
+抽样场景: [86]
+模式顺序: ['optimized']  (依次跑, 一次一个仿真)
+
+########## 模式 optimized -> trace_86_optimized_r1 ##########
+  [输入] B86 vehicle.csv -> 14,60
+
+[20:20] B86 开始 (run_timeout=7200s, stale_wall=900s)
+  B86 子进程正常退出 rc=0
+    修复 id.csv 表头: 100012 -> id
+    修复 operation_state.csv 表头: 100012,108,1,48.55,129.812,178.362 -> vehicle_id,road_id,state,simu_time,wait_s,end_s
+  完成 B86: 产物已保存到 E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\trace_86_optimized_r1\B86 (分数由网页给出)
+B86   13    产物已产出 -> trace_86_optimized_r1/B86
+[optimized] 新产出 1 题, 跳过 0 题
+[optimized] 产物目录: E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\trace_86_optimized_r1
+[optimized] 下一步: pack_submit.py E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\trace_86_optimized_r1 压缩后提交网页评分
+
+===== 全部模式产物产出完成, 耗时 224s =====
+[注意] 本脚本不本地算分。请用 pack_submit.py 把各 test_vN/ 压缩提交网页,
+   下载官方 score.csv 后, 用 compare_scores.py 横向比较版本择优。

@@ -1,0 +1,35 @@
+抽样场景: [25, 1, 4, 17]
+模式顺序: ['ring']  (依次跑, 一次一个仿真)
+
+########## 模式 ring -> test_v6 ##########
+  [输入] B25 vehicle.csv -> 14,60
+
+[19:58] B25 开始 (run_timeout=7200s, stale_wall=420s)
+  B25 子进程正常退出 rc=0
+  完成 B25: 产物已保存到 E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\test_v6\B25 (分数由网页给出)
+B25   7     产物已产出 -> test_v6/B25
+  [输入] B1 vehicle.csv -> 14,60
+
+[20:07] B1 开始 (run_timeout=7200s, stale_wall=420s)
+  B1 子进程正常退出 rc=0
+  完成 B1: 产物已保存到 E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\test_v6\B1 (分数由网页给出)
+B1    8     产物已产出 -> test_v6/B1
+  [输入] B4 vehicle.csv -> 30,60
+
+[20:18] B4 开始 (run_timeout=7200s, stale_wall=420s)
+  B4 子进程正常退出 rc=0
+  完成 B4: 产物已保存到 E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\test_v6\B4 (分数由网页给出)
+B4    8     产物已产出 -> test_v6/B4
+  [输入] B17 vehicle.csv -> 14,60
+
+[20:30] B17 开始 (run_timeout=7200s, stale_wall=420s)
+  B17 子进程正常退出 rc=0
+  完成 B17: 产物已保存到 E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\test_v6\B17 (分数由网页给出)
+B17   12    产物已产出 -> test_v6/B17
+[ring] 新产出 4 题, 跳过 0 题
+[ring] 产物目录: E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\test_v6
+[ring] 下一步: pack_submit.py E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\test_v6 压缩后提交网页评分
+
+===== 全部模式产物产出完成, 耗时 2346s =====
+⚠️ 本脚本不本地算分。请用 pack_submit.py 把各 test_vN/ 压缩提交网页,
+   下载官方 score.csv 后, 用 compare_scores.py 横向比较版本择优。

@@ -1,0 +1,40 @@
+# ===== Secrets / license files =====
+*.key
+.curl_cookies.txt
+
+# ===== Python cache / build artifacts =====
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ===== Contest submission results (用户明确: test 不提交) =====
+TESS_PythonAPI/test/
+
+# ===== Scratch / archive / bulk data (不入库) =====
+TESS_PythonAPI_archive/
+TESS_PythonAPI/WorkSpace/
+TESS_PythonAPI/Output/
+TESS_PythonAPI/_backups/
+TESS_PythonAPI/submit_*/
+TESS_PythonAPI/test_submit.zip
+TESS_PythonAPI/vehicle_state.csv
+TESS_PythonAPI/exit_reason.txt
+
+# ===== Raw contest paper data =====
+Test Paper B/
+
+# ===== Result / backup CSVs at repo root (保留 score.csv 作为 SSoT 评分基准) =====
+score_frozen_baseline.csv
+score_212418_backup.csv
+never_improved_vs_frozen.csv
+score_full_new.csv
+low_score_analysis.csv
+topology_map.csv
+
+# ===== Private project memory / state =====
+.workbuddy/
+
+# ===== OS / editor noise =====
+.DS_Store
+Thumbs.db

@@ -1,0 +1,8 @@
+numpy==1.19.5
+pandas==1.1.5
+python-dateutil==2.8.2
+pytz==2023.3.post1
+six==1.16.0
+PySide2==5.15.2.1
+shiboken2==5.15.2.1
+tessng==4.1.1.0

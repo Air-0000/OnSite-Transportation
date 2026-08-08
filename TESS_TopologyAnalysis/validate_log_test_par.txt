@@ -1,0 +1,16 @@
+抽样场景: [1, 2, 17, 21]
+模式顺序: ['optimized']  (依次跑, 一次一个仿真)
+
+########## 模式 optimized -> test_par ##########
+  [输入] B1 vehicle.csv -> 14,60
+
+[02:49] B1 开始 (run_timeout=7200s, stale_wall=900s)
+  B1 子进程正常退出 rc=0
+  完成 B1: 产物已保存到 E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\test_par\B1 (分数由网页给出)
+B1    8     产物已产出 -> test_par/B1
+  [输入] B2 vehicle.csv -> 18,60
+
+[03:08] B2 开始 (run_timeout=7200s, stale_wall=900s)
+  仿真停滞 900s 无进展(末simu_time=3010.0)，强制结束
+  完成 B2: 产物已保存到 E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\test_par\B2 (分数由网页给出)
+B2    8     产物已产出 -> test_par/B2

@@ -1,0 +1,17 @@
+抽样场景: [86]
+模式顺序: ['optimized']  (依次跑, 一次一个仿真)
+
+########## 模式 optimized -> test_syn_b86_opt ##########
+  [输入] B86 vehicle.csv -> 14,60
+
+[12:23] B86 开始 (run_timeout=7200s, stale_wall=900s)
+  仿真停滞 900s 无进展(末simu_time=2550.0)，强制结束
+  完成 B86: 产物已保存到 E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\test_syn_b86_opt\B86 (分数由网页给出)
+B86   13    产物已产出 -> test_syn_b86_opt/B86
+[optimized] 新产出 1 题, 跳过 0 题
+[optimized] 产物目录: E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\test_syn_b86_opt
+[optimized] 下一步: pack_submit.py E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\test_syn_b86_opt 压缩后提交网页评分
+
+===== 全部模式产物产出完成, 耗时 906s =====
+[注意] 本脚本不本地算分。请用 pack_submit.py 把各 test_vN/ 压缩提交网页,
+   下载官方 score.csv 后, 用 compare_scores.py 横向比较版本择优。

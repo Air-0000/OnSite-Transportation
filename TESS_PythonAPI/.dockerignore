@@ -1,0 +1,14 @@
+# 本地安全网/缓存，不需进入镜像
+_backups/
+__pycache__/
+*.pyc
+*.pyo
+*.log
+.git
+.gitignore
+# 暂存/实验产物, 不进镜像
+test/new_test/
+submit_*/
+score_*.csv
+score_full_new.csv
+never_improved_vs_frozen.csv

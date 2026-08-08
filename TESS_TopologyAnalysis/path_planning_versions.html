@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>路径规划版本对比（2026-08-02 下午）</title>
+<style>
+body{font-family:"Microsoft YaHei",sans-serif;background:#f5f6f8;color:#222;padding:24px}
+.wrap{max-width:960px;margin:0 auto}
+h1{font-size:20px;border-bottom:3px solid #2e9e6b;padding-bottom:8px}
+h2{font-size:15px;margin-top:22px;color:#1a5276}
+table{border-collapse:collapse;width:100%;font-size:12.5px;background:#fff;margin:10px 0}
+th,td{border:1px solid #dde3e8;padding:6px 9px;text-align:left;vertical-align:top}
+th{background:#eef4f0}
+.win{color:#1e8449;font-weight:600}
+.lose{color:#c0392b;font-weight:600}
+.unk{color:#b9770e;font-weight:600}
+.run{color:#2980b9;font-weight:600}
+.badge{display:inline-block;padding:1px 8px;border-radius:10px;color:#fff;font-size:11px;font-weight:600}
+.sum{background:#fff8e6;border-radius:8px;padding:10px 14px;margin:12px 0;font-size:13px}
+</style>
+</head>
+<body><div class="wrap">
+<h1>🛣 路径规划各版本对比（B25 / 14车 chain 实测）</h1>
+<div class="sum"><b>基准</b>：RT=0 单路径 optimized = <b>2430.40</b>（未完成-206.7/超时-370.3/提前+2707.5/顶牛-200）<br>
+<b>已验证最优</b>：RT=1（BFS绕路+换道）= <b>2758.76</b>（+328：提前+3031.8/未完成-185.5/顶牛-140/超时-447.5）<br>
+<b>核心教训</b>：高干预（改路径/停车让行/实时换路）在单车道瓶颈路网上副作用大；低干预（只有明确拥堵才绕路）才稳。</div>
+
+<h2>① 版本总览</h2>
+<table>
+<tr><th>版本</th><th>机制原理</th><th>开关</th><th>B25 官方分</th><th>健康度证据</th><th>结论</th></tr>
+<tr><td><b>RT=0 单路径</b></td><td>每 OD 固定 1 条绕装卸点路径，零干预</td><td>默认</td><td class="win">2430.40</td><td>健康（73 作业 / 3266s）</td><td class="win">✅ 保底基准</td></tr>
+<tr><td><b>RT=1</b></td><td>BFS 绕路（下一路段≥3车拥堵才绕）+ 换道突围</td><td>RT=1</td><td class="win"><b>2758.76</b>（+328）</td><td>健康（73 作业 / 3266s）</td><td class="win">✅ <b>唯一验证通过</b></td></tr>
+<tr><td><b>v15 DD 动态发单</b></td><td>运行中给闲置车补未满批（改路径）</td><td>DD=1</td><td class="lose">—（未收分）</td><td class="lose">全车停摆（1513s 冻结，作业 34）</td><td class="lose">❌ 运行中改路径触发平台终止</td></tr>
+<tr><td><b>v16.1 多路径机械轮转</b></td><td>预分配按 v%len(paths) 轮转分流</td><td>MULTIPATH=1</td><td class="lose">—（未收分）</td><td class="lose">对向顶牛堵家门口</td><td class="lose">❌ 分散后交叉冲突</td></tr>
+<tr><td><b>v16.2 车流感知预分配</b></td><td>预分配统计每条路径已分车数→选最少（负载均衡）</td><td>MULTIPATH=1</td><td class="unk">—（测试中被叫停）</td><td class="unk">未出健康度结论</td><td class="unk">⏸ 零干预原理最安全，待测</td></tr>
+<tr><td><b>v17 会车避让（停车）</b></td><td>检测对向顶牛，id 小者 speed=0 停车让行</td><td>AVOID=1</td><td class="lose">—（未收分）</td><td class="lose">入口 82 单车道连锁死锁</td><td class="lose">❌ 窄路口不能停车让行</td></tr>
+<tr><td><b>v17.1 背景车修正</b></td><td>只判受控车对向（背景车装卸 0 速不误判）</td><td>AVOID=1</td><td class="lose">—（未收分）</td><td class="lose">仍堵（4 车只做 1 趟卡死）</td><td class="lose">❌ 停车策略本身有问题</td></tr>
+<tr><td><b>v17.3 减速不刹死</b></td><td>让行改为 speed=1.5m/s 蠕动 + 仅装卸区生效</td><td>AVOID=1</td><td class="lose">—（未收分）</td><td class="lose">仍堵死（用户画面确认）</td><td class="lose">❌ 减速在瓶颈路网同样放大拥堵</td></tr>
+<tr><td><b>v18 实时流量感知</b></td><td>整段路径车流密度≥1.5 且备选显著更空(<0.8×)才换路</td><td>RT=1 + MULTIPATH=1</td><td class="unk">—（r1/r2 被停未收分）</td><td class="unk">r1：simu984s 时 7/14 活跃偏堵；r2：128 行持续健康</td><td class="run">🔄 r3 正在跑（最终判定）</td></tr>
+</table>
+
+<h2>② 已收官方分的版本（分项明细）</h2>
+<table>
+<tr><th>版本</th><th>未完成</th><th>超时</th><th>提前加分</th><th>顶牛</th><th>总得分</th><th>vs 基准</th></tr>
+<tr><td>RT=0（基准）</td><td>-206.7</td><td>-370.3</td><td>+2707.5</td><td>-200</td><td><b>2430.40</b></td><td>—</td></tr>
+<tr><td><b>RT=1</b></td><td>-185.5</td><td>-447.5</td><td>+3031.8</td><td>-140</td><td><b>2758.76</b></td><td class="win">+328</td></tr>
+</table>
+
+<h2>③ 失败根因分类（都是"高干预"）</h2>
+<table>
+<tr><th>干预类型</th><th>版本</th><th>根因</th></tr>
+<tr><td>运行中改路径</td><td>v15 DD、v18</td><td>平台对"运行中路径变更"有终止机制（DD 实测全车停摆）；v18 换路与 BFS 同机制，风险低于 DD 但仍有</td></tr>
+<tr><td>停车让行</td><td>v17 / v17.1</td><td>单车道瓶颈处一辆车停下→后车全堵→连锁死锁（入口 82 实证）</td></tr>
+<tr><td>减速蠕动</td><td>v17.3</td><td>减速同样打断车流，在瓶颈路网放大拥堵</td></tr>
+<tr><td>空间分散</td><td>v16.1</td><td>车流分散到各路径→交叉点增多→对向顶牛（"从一两个路口堵变成每个路口小堵"）</td></tr>
+</table>
+
+<h2>④ 当前状态</h2>
+<div class="sum">
+<b>正在跑</b>：v18 r3（B25 optimized + RT=1 + MULTIPATH=1，15:22 启动，约 15:40 落盘）——第三次重跑，最终判定 v18 是否可用。<br>
+<b>已验证保底</b>：RT=1（2758.76）为当前交付，动态机制（DD/AVOID/MULTIPATH/v18）全部开关化默认关。<br>
+<b>关键认知</b>：这个路网"让车稳定跑 > 动态干预"——低干预的 BFS 绕路是唯一有效的路径优化。
+</div>
+<p style="color:#888;font-size:12px">生成: 2026-08-02 15:27 | 数据来源: 网页官方分 + operation_state 健康度分析</p>
+</div></body></html>

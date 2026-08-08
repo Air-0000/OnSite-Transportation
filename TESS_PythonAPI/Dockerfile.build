@@ -1,0 +1,10 @@
+# 本地构建用 Dockerfile(非平台占位 Dockerfile)。
+# 平台占位 Dockerfile 是 `FROM scratch; WORKDIR /project; COPY . .`,
+# 由评测平台把 `FROM scratch` 替换成官方 TESS 运行时基础镜像后构建/运行。
+# 这里直接以真实基础镜像构建, 复刻 onsite:v0p3 的配方:
+#   base = constant0000/track0409:stale-fix-v6 (== tess:submit_v6, 含 python3.6.8 + tessng + numpy/pandas)
+#   WORKDIR /   COPY . .   CMD ["python","main.py"]
+FROM constant0000/track0409:stale-fix-v6
+WORKDIR /project
+COPY . .
+CMD ["python", "main.py"]

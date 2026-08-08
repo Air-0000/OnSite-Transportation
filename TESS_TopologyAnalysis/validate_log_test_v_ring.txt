@@ -1,0 +1,10 @@
+抽样场景: [5, 61]
+模式顺序: ['ring']  (依次跑, 一次一个仿真)
+
+########## 模式 ring -> test_v_ring ##########
+  [输入] B5 vehicle.csv -> 14,60
+
+[09:08] B5 开始 (run_timeout=7200s, stale_wall=900s)
+  B5 子进程正常退出 rc=0
+  完成 B5: 产物已保存到 E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\test_v_ring\B5 (分数由网页给出)
+B5    8     产物已产出 -> test_v_ring/B5

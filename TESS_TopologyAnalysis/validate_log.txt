@@ -1,0 +1,43 @@
+抽样场景: [1, 2, 9, 13, 17, 21, 25, 29]
+模式顺序: ['generic']  (依次跑, 一次一个仿真)
+
+########## 模式 generic -> test_v1 ##########
+B1    8     跳过(产物已存在) -> test_v1/B1
+B2    8     跳过(产物已存在) -> test_v1/B2
+
+[14:31] B9 开始 (run_timeout=7200s, stale_wall=300s)
+  B9 子进程正常退出 rc=0
+  完成 B9: 产物已保存到 E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\test_v1\B9 (分数由网页给出)
+B9    10    产物已产出 -> test_v1/B9
+
+[14:38] B13 开始 (run_timeout=7200s, stale_wall=300s)
+  B13 子进程正常退出 rc=0
+  完成 B13: 产物已保存到 E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\test_v1\B13 (分数由网页给出)
+B13   6     产物已产出 -> test_v1/B13
+
+[14:46] B17 开始 (run_timeout=7200s, stale_wall=300s)
+  B17 子进程正常退出 rc=0
+  完成 B17: 产物已保存到 E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\test_v1\B17 (分数由网页给出)
+B17   12    产物已产出 -> test_v1/B17
+
+[14:51] B21 开始 (run_timeout=7200s, stale_wall=300s)
+  B21 子进程正常退出 rc=0
+  完成 B21: 产物已保存到 E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\test_v1\B21 (分数由网页给出)
+B21   9     产物已产出 -> test_v1/B21
+
+[14:54] B25 开始 (run_timeout=7200s, stale_wall=300s)
+  B25 子进程正常退出 rc=0
+  完成 B25: 产物已保存到 E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\test_v1\B25 (分数由网页给出)
+B25   7     产物已产出 -> test_v1/B25
+
+[15:01] B29 开始 (run_timeout=7200s, stale_wall=300s)
+  B29 子进程正常退出 rc=0
+  完成 B29: 产物已保存到 E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\test_v1\B29 (分数由网页给出)
+B29   11    产物已产出 -> test_v1/B29
+[generic] 新产出 6 题, 跳过 2 题
+[generic] 产物目录: E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\test_v1
+[generic] 下一步: pack_submit.py E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\test_v1 压缩后提交网页评分
+
+===== 全部模式产物产出完成, 耗时 2202s =====
+⚠️ 本脚本不本地算分。请用 pack_submit.py 把各 test_vN/ 压缩提交网页,
+   下载官方 score.csv 后, 用 compare_scores.py 横向比较版本择优。

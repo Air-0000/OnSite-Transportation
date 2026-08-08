@@ -1,0 +1,17 @@
+抽样场景: [12]
+模式顺序: ['generic']  (依次跑, 一次一个仿真)
+
+########## 模式 generic -> verify_dr ##########
+  [输入] B12 vehicle.csv -> 30,60
+
+[05:21] B12 开始 (run_timeout=7200s, stale_wall=900s)
+  B12 子进程正常退出 rc=0
+  完成 B12: 产物已保存到 E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\verify_dr\B12 (分数由网页给出)
+B12   10    产物已产出 -> verify_dr/B12
+[generic] 新产出 1 题, 跳过 0 题
+[generic] 产物目录: E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\verify_dr
+[generic] 下一步: pack_submit.py E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\verify_dr 压缩后提交网页评分
+
+===== 全部模式产物产出完成, 耗时 905s =====
+[注意] 本脚本不本地算分。请用 pack_submit.py 把各 test_vN/ 压缩提交网页,
+   下载官方 score.csv 后, 用 compare_scores.py 横向比较版本择优。

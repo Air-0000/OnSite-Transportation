@@ -1,0 +1,17 @@
+抽样场景: [44]
+模式顺序: ['generic']  (依次跑, 一次一个仿真)
+
+########## 模式 generic -> swp_44 ##########
+  [输入] B44 vehicle.csv -> 30,60
+
+[04:44] B44 开始 (run_timeout=7200s, stale_wall=900s)
+  仿真停滞 900s 无进展(末simu_time=3208.0)，强制结束
+  完成 B44: 产物已保存到 E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\swp_44\B44 (分数由网页给出)
+B44   6     产物已产出 -> swp_44/B44
+[generic] 新产出 1 题, 跳过 0 题
+[generic] 产物目录: E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\swp_44
+[generic] 下一步: pack_submit.py E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\swp_44 压缩后提交网页评分
+
+===== 全部模式产物产出完成, 耗时 906s =====
+[注意] 本脚本不本地算分。请用 pack_submit.py 把各 test_vN/ 压缩提交网页,
+   下载官方 score.csv 后, 用 compare_scores.py 横向比较版本择优。

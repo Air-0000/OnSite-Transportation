@@ -1,0 +1,144 @@
+<!doctype html><html lang=zh><head><meta charset=utf-8><meta name='viewport' content='width=device-width,initial-scale=1'><title>阈值 xOy 分布</title></head><body style='margin:0;background:#fafbfc'><div style='padding:14px 18px;font-family:-apple-system,Segoe UI,Microsoft YaHei,sans-serif'><h2 style='margin:4px 0;font-size:18px'>派单阈值 xOy 分布图</h2><div style='color:#667;font-size:13px;margin-bottom:8px'>横轴=反配度 pair, 纵轴=串行度 seriality · 红虚线 pair=0.5 为绑定切点, 橙虚线 seriality=0.8 为 C卷 安全网</div><svg viewBox="0 0 790 560" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Microsoft YaHei,sans-serif">
+<rect x="0" y="0" width="790" height="560" fill="#fafbfc"/>
+<rect x="277.9" y="40" width="214.2" height="460" fill="#fff3e0" opacity="0.7"/>
+<text x="385.0" y="56" fill="#b26a00" font-size="11" text-anchor="middle">真实B卷数据空隙 (0.33&lt;pair&lt;0.67 无点)</text>
+<line x1="70.0" y1="40" x2="70.0" y2="500" stroke="#e3e6ea"/>
+<text x="70.0" y="516" fill="#667" font-size="11" text-anchor="middle">0.00</text>
+<line x1="227.5" y1="40" x2="227.5" y2="500" stroke="#e3e6ea"/>
+<text x="227.5" y="516" fill="#667" font-size="11" text-anchor="middle">0.25</text>
+<line x1="385.0" y1="40" x2="385.0" y2="500" stroke="#e3e6ea"/>
+<text x="385.0" y="516" fill="#667" font-size="11" text-anchor="middle">0.50</text>
+<line x1="542.5" y1="40" x2="542.5" y2="500" stroke="#e3e6ea"/>
+<text x="542.5" y="516" fill="#667" font-size="11" text-anchor="middle">0.75</text>
+<line x1="700.0" y1="40" x2="700.0" y2="500" stroke="#e3e6ea"/>
+<text x="700.0" y="516" fill="#667" font-size="11" text-anchor="middle">1.00</text>
+<line x1="70" y1="500.0" x2="700" y2="500.0" stroke="#e3e6ea"/>
+<text x="64" y="500.0" fill="#667" font-size="11" text-anchor="end" dominant-baseline="middle">0.00</text>
+<line x1="70" y1="385.0" x2="700" y2="385.0" stroke="#e3e6ea"/>
+<text x="64" y="385.0" fill="#667" font-size="11" text-anchor="end" dominant-baseline="middle">0.25</text>
+<line x1="70" y1="270.0" x2="700" y2="270.0" stroke="#e3e6ea"/>
+<text x="64" y="270.0" fill="#667" font-size="11" text-anchor="end" dominant-baseline="middle">0.50</text>
+<line x1="70" y1="155.0" x2="700" y2="155.0" stroke="#e3e6ea"/>
+<text x="64" y="155.0" fill="#667" font-size="11" text-anchor="end" dominant-baseline="middle">0.75</text>
+<line x1="70" y1="40.0" x2="700" y2="40.0" stroke="#e3e6ea"/>
+<text x="64" y="40.0" fill="#667" font-size="11" text-anchor="end" dominant-baseline="middle">1.00</text>
+<line x1="70" y1="40" x2="70" y2="500" stroke="#333" stroke-width="1.5"/>
+<line x1="70" y1="500" x2="700" y2="500" stroke="#333" stroke-width="1.5"/>
+<line x1="385.0" y1="40" x2="385.0" y2="500" stroke="#c62828" stroke-width="2" stroke-dasharray="7 4"/>
+<text x="385.0" y="32" fill="#c62828" font-size="12" font-weight="700" text-anchor="middle">pair = 0.5  切点</text>
+<text x="455.0" y="70" fill="#c62828" font-size="10.5" text-anchor="middle">≥0.5 → generic</text>
+<text x="290.0" y="70" fill="#1565c0" font-size="10.5" text-anchor="middle">&lt;0.5 → 14车optimized / ≥18车throttle</text>
+<line x1="70" y1="270.0" x2="700" y2="270.0" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="2 3" opacity="0.5"/>
+<text x="76" y="266.0" fill="#1565c0" font-size="9.5" opacity="0.85" text-anchor="start">seriality=0.5  翻 optimized/generic(对B卷无点落入, 仅C卷用)</text>
+<line x1="70" y1="132.0" x2="700" y2="132.0" stroke="#ef6c00" stroke-width="1.8" stroke-dasharray="4 4"/>
+<text x="76" y="126.0" fill="#ef6c00" font-size="11" font-weight="700" text-anchor="start">seriality = 0.8  链/混边界 (C卷安全网, B卷不改模式)</text>
+<circle cx="700.0" cy="385.0" r="5.0" fill="#2e7d32" fill-opacity="0.82" stroke="#111" stroke-width="2.0"/>
+<circle cx="700.0" cy="385.0" r="6.5" fill="#2e7d32" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="700.0" cy="385.0" r="8.0" fill="#2e7d32" fill-opacity="0.82" stroke="#111" stroke-width="2.0"/>
+<circle cx="700.0" cy="385.0" r="9.5" fill="#2e7d32" fill-opacity="0.82" stroke="#111" stroke-width="2.0"/>
+<circle cx="70.0" cy="40.0" r="5.0" fill="#1565c0" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="70.0" cy="40.0" r="6.5" fill="#c62828" fill-opacity="0.82" stroke="#111" stroke-width="2.0"/>
+<circle cx="70.0" cy="40.0" r="8.0" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="70.0" cy="40.0" r="9.5" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="700.0" cy="316.0" r="5.0" fill="#2e7d32" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="700.0" cy="316.0" r="6.5" fill="#2e7d32" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="700.0" cy="316.0" r="8.0" fill="#2e7d32" fill-opacity="0.82" stroke="#111" stroke-width="2.0"/>
+<circle cx="700.0" cy="316.0" r="9.5" fill="#2e7d32" fill-opacity="0.82" stroke="#111" stroke-width="2.0"/>
+<circle cx="70.0" cy="40.0" r="5.0" fill="#1565c0" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="70.0" cy="40.0" r="6.5" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="70.0" cy="40.0" r="8.0" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="70.0" cy="40.0" r="9.5" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="280.0" cy="193.3" r="5.0" fill="#1565c0" fill-opacity="0.82" stroke="#111" stroke-width="2.0"/>
+<text x="280.0" y="184.3" font-size="10.5" font-weight="700" text-anchor="middle" fill="#111">B17</text>
+<circle cx="280.0" cy="193.3" r="6.5" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="280.0" cy="193.3" r="8.0" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="280.0" cy="193.3" r="9.5" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="210.0" cy="91.1" r="5.0" fill="#1565c0" fill-opacity="0.82" stroke="#111" stroke-width="2.0"/>
+<text x="210.0" y="82.1" font-size="10.5" font-weight="700" text-anchor="middle" fill="#111">B21</text>
+<circle cx="210.0" cy="91.1" r="6.5" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="210.0" cy="91.1" r="8.0" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="210.0" cy="91.1" r="9.5" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="70.0" cy="-25.7" r="5.0" fill="#1565c0" fill-opacity="0.82" stroke="#111" stroke-width="2.0"/>
+<text x="70.0" y="-34.7" font-size="10.5" font-weight="700" text-anchor="middle" fill="#111">B25</text>
+<circle cx="70.0" cy="-25.7" r="6.5" fill="#c62828" fill-opacity="0.82" stroke="#111" stroke-width="2.0"/>
+<circle cx="70.0" cy="-25.7" r="8.0" fill="#c62828" fill-opacity="0.82" stroke="#111" stroke-width="2.0"/>
+<circle cx="70.0" cy="-25.7" r="9.5" fill="#c62828" fill-opacity="0.82" stroke="#111" stroke-width="2.0"/>
+<circle cx="184.5" cy="165.5" r="5.0" fill="#1565c0" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="184.5" cy="165.5" r="6.5" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="184.5" cy="165.5" r="8.0" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="184.5" cy="165.5" r="9.5" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="70.0" cy="40.0" r="5.0" fill="#1565c0" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="70.0" cy="40.0" r="6.5" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="70.0" cy="40.0" r="8.0" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="70.0" cy="40.0" r="9.5" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="196.0" cy="132.0" r="5.0" fill="#1565c0" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="196.0" cy="132.0" r="6.5" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="196.0" cy="132.0" r="8.0" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="196.0" cy="132.0" r="9.5" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="70.0" cy="-36.7" r="5.0" fill="#1565c0" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="70.0" cy="-36.7" r="6.5" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="70.0" cy="-36.7" r="8.0" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="70.0" cy="-36.7" r="9.5" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="700.0" cy="346.7" r="5.0" fill="#2e7d32" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="700.0" cy="346.7" r="6.5" fill="#2e7d32" fill-opacity="0.82" stroke="#111" stroke-width="2.0"/>
+<circle cx="700.0" cy="346.7" r="8.0" fill="#2e7d32" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="700.0" cy="346.7" r="9.5" fill="#2e7d32" fill-opacity="0.82" stroke="#111" stroke-width="2.0"/>
+<circle cx="630.0" cy="295.6" r="5.0" fill="#2e7d32" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="630.0" cy="295.6" r="6.5" fill="#2e7d32" fill-opacity="0.82" stroke="#111" stroke-width="2.0"/>
+<circle cx="630.0" cy="295.6" r="8.0" fill="#2e7d32" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="630.0" cy="295.6" r="9.5" fill="#2e7d32" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="70.0" cy="-25.7" r="5.0" fill="#1565c0" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="70.0" cy="-25.7" r="6.5" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="70.0" cy="-25.7" r="8.0" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="70.0" cy="-25.7" r="9.5" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="184.5" cy="165.5" r="5.0" fill="#1565c0" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="184.5" cy="165.5" r="6.5" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="184.5" cy="165.5" r="8.0" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="184.5" cy="165.5" r="9.5" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="70.0" cy="40.0" r="5.0" fill="#1565c0" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="70.0" cy="40.0" r="6.5" fill="#c62828" fill-opacity="0.82" stroke="#111" stroke-width="2.0"/>
+<circle cx="70.0" cy="40.0" r="8.0" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="70.0" cy="40.0" r="9.5" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="196.0" cy="132.0" r="5.0" fill="#1565c0" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="196.0" cy="132.0" r="6.5" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="196.0" cy="132.0" r="8.0" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="196.0" cy="132.0" r="9.5" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="490.0" cy="193.3" r="5.0" fill="#2e7d32" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="490.0" cy="193.3" r="6.5" fill="#2e7d32" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="490.0" cy="193.3" r="8.0" fill="#2e7d32" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="490.0" cy="193.3" r="9.5" fill="#2e7d32" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="70.0" cy="91.1" r="5.0" fill="#1565c0" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="70.0" cy="91.1" r="6.5" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="70.0" cy="91.1" r="8.0" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="70.0" cy="91.1" r="9.5" fill="#c62828" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="490.0" cy="346.7" r="5.0" fill="#2e7d32" fill-opacity="0.82" stroke="#111" stroke-width="2.0"/>
+<text x="490.0" y="337.7" font-size="10.5" font-weight="700" text-anchor="middle" fill="#111">B77</text>
+<circle cx="490.0" cy="346.7" r="6.5" fill="#2e7d32" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="490.0" cy="346.7" r="8.0" fill="#2e7d32" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<circle cx="490.0" cy="346.7" r="9.5" fill="#2e7d32" fill-opacity="0.82" stroke="none" stroke-width="0.0"/>
+<rect x="274.0" y="110.7" width="12.0" height="12.0" transform="rotate(45 280.0 116.7)" fill="#1565c0" stroke="#222" stroke-width="1.2" opacity="0.92"/>
+<rect x="316.0" y="172.0" width="12.0" height="12.0" transform="rotate(45 322.0 178.0)" fill="#1565c0" stroke="#222" stroke-width="1.2" opacity="0.92"/>
+<rect x="344.0" y="187.3" width="12.0" height="12.0" transform="rotate(45 350.0 193.3)" fill="#1565c0" stroke="#222" stroke-width="1.2" opacity="0.92"/>
+<rect x="379.0" y="149.0" width="12.0" height="12.0" transform="rotate(45 385.0 155.0)" fill="#2e7d32" stroke="#222" stroke-width="1.2" opacity="0.92"/>
+<rect x="354.8" y="210.9" width="12.0" height="12.0" transform="rotate(45 360.8 216.9)" fill="#1565c0" stroke="#222" stroke-width="1.2" opacity="0.92"/>
+<text x="360.8" y="207.9" font-size="10.5" font-weight="700" text-anchor="middle" fill="#111">B86</text>
+<rect x="442.0" y="172.0" width="12.0" height="12.0" transform="rotate(45 448.0 178.0)" fill="#2e7d32" stroke="#222" stroke-width="1.2" opacity="0.92"/>
+<rect x="522.2" y="243.1" width="12.0" height="12.0" transform="rotate(45 528.2 249.1)" fill="#2e7d32" stroke="#222" stroke-width="1.2" opacity="0.92"/>
+<rect x="694.0" y="379.0" width="12.0" height="12.0" transform="rotate(45 700.0 385.0)" fill="#2e7d32" stroke="#222" stroke-width="1.2" opacity="0.92"/>
+<text x="385.0" y="552" fill="#222" font-size="13" font-weight="700" text-anchor="middle">反配度 pair  (存在反向OD批数 / 总批数)</text>
+<text x="18" y="270" fill="#222" font-size="13" font-weight="700" text-anchor="middle" transform="rotate(-90 18 270)">串行度 seriality  (最大连通分量 / 总批数)</text>
+<rect x="708" y="44" width="56" height="150" fill="#fff" stroke="#ddd" rx="6"/>
+<circle cx="720" cy="58.0" r="6" fill="#2e7d32"/>
+<text x="732" y="62.0" font-size="11.5" fill="#222">generic</text>
+<circle cx="720" cy="80.0" r="6" fill="#1565c0"/>
+<text x="732" y="84.0" font-size="11.5" fill="#222">optimized</text>
+<circle cx="720" cy="102.0" r="6" fill="#c62828"/>
+<text x="732" y="106.0" font-size="11.5" fill="#222">throttle</text>
+<rect x="715.0" y="120.0" width="11" height="11" transform="rotate(45 720 125.5)" fill="none" stroke="#222" stroke-width="1.2"/>
+<text x="732" y="128.0" font-size="11.5" fill="#222">synthetic</text>
+<circle cx="720" cy="146.0" r="6" fill="none" stroke="#111" stroke-width="2"/>
+<text x="732" y="150.0" font-size="11.5" fill="#222">已实证</text>
+<text x="70" y="540" font-size="12" fill="#333">真实B卷80题: generic 24题  optimized 14题  throttle 42题   ·   合成标定 B82-B89: 8题</text>
+<text x="70" y="558" font-size="11" fill="#667">点大小=车队规模(14/18/24/30) · 黑边=已实证场景 · 菱形=合成题 · 橙带=真实数据空隙</text>
+<text x="70" y="576" font-size="11" fill="#1565c0">seriality 对B卷模式判定无影响: 14车低pair场景 seriality 均≥0.667, 0.5线形同虚设 → 纵轴仅展示OD结构, 切点只看 pair=0.5</text>
+</svg></div></body></html>

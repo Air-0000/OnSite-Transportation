@@ -1,0 +1,16 @@
+抽样场景: [25, 26, 27, 28]
+模式顺序: ['generic']  (依次跑, 一次一个仿真)
+
+########## 模式 generic -> test_v5 ##########
+  [输入] B25 vehicle.csv -> 14,60
+
+[18:44] B25 开始 (run_timeout=7200s, stale_wall=420s)
+  B25 子进程正常退出 rc=0
+  完成 B25: 产物已保存到 E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\test_v5\B25 (分数由网页给出)
+B25   7     产物已产出 -> test_v5/B25
+  [输入] B26 vehicle.csv -> 18,60
+
+[19:16] B26 开始 (run_timeout=7200s, stale_wall=420s)
+  B26 子进程正常退出 rc=0
+  完成 B26: 产物已保存到 E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\test_v5\B26 (分数由网页给出)
+B26   7     产物已产出 -> test_v5/B26

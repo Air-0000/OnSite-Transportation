@@ -1,0 +1,17 @@
+抽样场景: [41]
+模式顺序: ['optimized']  (依次跑, 一次一个仿真)
+
+########## 模式 optimized -> swp_41 ##########
+  [输入] B41 vehicle.csv -> 14,60
+
+[03:44] B41 开始 (run_timeout=7200s, stale_wall=900s)
+  B41 子进程正常退出 rc=0
+  完成 B41: 产物已保存到 E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\swp_41\B41 (分数由网页给出)
+B41   6     产物已产出 -> swp_41/B41
+[optimized] 新产出 1 题, 跳过 0 题
+[optimized] 产物目录: E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\swp_41
+[optimized] 下一步: pack_submit.py E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\swp_41 压缩后提交网页评分
+
+===== 全部模式产物产出完成, 耗时 1356s =====
+[注意] 本脚本不本地算分。请用 pack_submit.py 把各 test_vN/ 压缩提交网页,
+   下载官方 score.csv 后, 用 compare_scores.py 横向比较版本择优。

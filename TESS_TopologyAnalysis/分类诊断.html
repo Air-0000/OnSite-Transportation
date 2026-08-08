@@ -1,0 +1,129 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8"><title>B卷80题分类诊断</title>
+<style>body{font-family:system-ui,-apple-system,"Microsoft YaHei",sans-serif;margin:0;padding:32px;background:#faf9f7;color:#2C2C2A;line-height:1.6}
+.wrap{max-width:1100px;margin:0 auto}h1{font-size:20px;font-weight:500;margin:0 0 4px}
+.sub{color:#5F5E5A;font-size:13px;margin-bottom:24px}
+h2{font-size:15px;font-weight:500;margin:28px 0 8px}
+table{border-collapse:collapse;width:100%;font-size:13px;background:#fff;border-radius:8px;overflow:hidden}
+th{background:#F1EFE8;text-align:right;padding:8px 10px;font-weight:500;font-size:12px;color:#5F5E5A}
+th:first-child,td:first-child{text-align:left}td{padding:7px 10px;text-align:right;border-top:1px solid #eee}
+.card{border-left:3px solid;padding:12px 16px;margin:10px 0;border-radius:6px;font-size:13px}
+.neg{color:#A32D2D}.pos{color:#3B6D11}.mut{color:#888780}
+.pill{display:inline-block;padding:1px 8px;border-radius:10px;font-size:12px;margin-right:6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:6px;margin-top:10px}
+.cell{background:#fff;border:1px solid #e8e6e0;border-radius:6px;padding:6px 8px;font-size:12px}
+.cell b{font-weight:500}</style></head><body><div class="wrap">
+<h1>B 卷 80 题分类诊断</h1>
+<div class="sub">基线来源 test/score.csv，合计 123338 分。按病灶归类，用于确定优化优先级。</div>
+<h2>类别总览</h2><table><tr><th>类别</th><th>题数</th><th>合计分</th><th>占比</th><th>均分</th><th>顶牛</th><th>未完成</th><th>超时</th><th>提前加</th></tr>
+<tr><td>A 七批崩溃</td><td>8</td><td>1071</td><td>0.9%</td><td>134</td><td class="neg">-36</td><td class="neg">-657</td><td class="neg">-65</td><td class="pos">+392</td></tr>
+<tr><td>C 车多堵死</td><td>13</td><td>10384</td><td>8.4%</td><td>799</td><td class="neg">-125</td><td class="neg">-884</td><td class="neg">-649</td><td class="pos">+1956</td></tr>
+<tr><td>B 六批低产</td><td>12</td><td>9460</td><td>7.7%</td><td>788</td><td class="neg">-27</td><td class="neg">-486</td><td class="neg">-78</td><td class="pos">+879</td></tr>
+<tr><td>D 中间地带</td><td>31</td><td>46149</td><td>37.4%</td><td>1489</td><td class="neg">-59</td><td class="neg">-721</td><td class="neg">-663</td><td class="pos">+2431</td></tr>
+<tr><td>E 健康高分</td><td>16</td><td>56275</td><td>45.6%</td><td>3517</td><td class="neg">-93</td><td class="neg">-458</td><td class="neg">-1193</td><td class="pos">+4762</td></tr>
+</table>
+<h2>A 七批崩溃 <span class="mut" style="font-weight:400">· 8 题 · 1071 分</span></h2>
+<div class="card" style="border-color:#A32D2D;background:#FCEBEB">批次=7，原版配对逻辑崩溃。v1 generic 通用分配应已修复，待验证。</div>
+<div class="grid">
+<div class="cell"><b>B27</b> <span style="color:#A32D2D">-154</span><br><span class="mut">7批·24车·3.7趟</span></div>
+<div class="cell"><b>B28</b> <span style="color:#A32D2D">-120</span><br><span class="mut">7批·30车·3.8趟</span></div>
+<div class="cell"><b>B26</b> <span style="color:#A32D2D">-56</span><br><span class="mut">7批·18车·3.7趟</span></div>
+<div class="cell"><b>B25</b> <span style="color:#A32D2D">-17</span><br><span class="mut">7批·14车·3.6趟</span></div>
+<div class="cell"><b>B56</b> <span style="color:#A32D2D">154</span><br><span class="mut">7批·30车·3.8趟</span></div>
+<div class="cell"><b>B55</b> <span style="color:#A32D2D">359</span><br><span class="mut">7批·24车·3.7趟</span></div>
+<div class="cell"><b>B53</b> <span style="color:#A32D2D">418</span><br><span class="mut">7批·14车·3.6趟</span></div>
+<div class="cell"><b>B54</b> <span style="color:#A32D2D">487</span><br><span class="mut">7批·18车·3.7趟</span></div>
+</div>
+<h2>C 车多堵死 <span class="mut" style="font-weight:400">· 13 题 · 10384 分</span></h2>
+<div class="card" style="border-color:#A32D2D;background:#FCEBEB">24/30 车且分数低。入口单车道队头阻塞，需三向分流+限流。</div>
+<div class="grid">
+<div class="cell"><b>B36</b> <span style="color:#A32D2D">91</span><br><span class="mut">8批·30车·4.4趟</span></div>
+<div class="cell"><b>B68</b> <span style="color:#A32D2D">299</span><br><span class="mut">10批·30车·5.5趟</span></div>
+<div class="cell"><b>B52</b> <span style="color:#A32D2D">519</span><br><span class="mut">9批·30车·4.9趟</span></div>
+<div class="cell"><b>B72</b> <span style="color:#5F5E5A">708</span><br><span class="mut">12批·30车·6.6趟</span></div>
+<div class="cell"><b>B39</b> <span style="color:#5F5E5A">759</span><br><span class="mut">10批·24车·5.4趟</span></div>
+<div class="cell"><b>B67</b> <span style="color:#5F5E5A">858</span><br><span class="mut">10批·24车·5.4趟</span></div>
+<div class="cell"><b>B19</b> <span style="color:#5F5E5A">878</span><br><span class="mut">12批·24车·6.5趟</span></div>
+<div class="cell"><b>B32</b> <span style="color:#5F5E5A">885</span><br><span class="mut">11批·30车·6.1趟</span></div>
+<div class="cell"><b>B71</b> <span style="color:#5F5E5A">1033</span><br><span class="mut">12批·24车·6.5趟</span></div>
+<div class="cell"><b>B60</b> <span style="color:#5F5E5A">1037</span><br><span class="mut">11批·30车·6.1趟</span></div>
+<div class="cell"><b>B24</b> <span style="color:#5F5E5A">1051</span><br><span class="mut">9批·30车·4.9趟</span></div>
+<div class="cell"><b>B63</b> <span style="color:#5F5E5A">1083</span><br><span class="mut">8批·24车·4.3趟</span></div>
+<div class="cell"><b>B59</b> <span style="color:#5F5E5A">1182</span><br><span class="mut">11批·24车·6.0趟</span></div>
+</div>
+<h2>B 六批低产 <span class="mut" style="font-weight:400">· 12 题 · 9460 分</span></h2>
+<div class="card" style="border-color:#854F0B;background:#FAEEDA">批次=6，任务本来就少，提前加分上限低。天花板问题，收益有限。</div>
+<div class="grid">
+<div class="cell"><b>B44</b> <span style="color:#A32D2D">185</span><br><span class="mut">6批·30车·3.2趟</span></div>
+<div class="cell"><b>B43</b> <span style="color:#A32D2D">407</span><br><span class="mut">6批·24车·3.2趟</span></div>
+<div class="cell"><b>B13</b> <span style="color:#A32D2D">471</span><br><span class="mut">6批·14车·3.1趟</span></div>
+<div class="cell"><b>B42</b> <span style="color:#A32D2D">537</span><br><span class="mut">6批·18车·3.2趟</span></div>
+<div class="cell"><b>B80</b> <span style="color:#5F5E5A">606</span><br><span class="mut">6批·30车·3.2趟</span></div>
+<div class="cell"><b>B41</b> <span style="color:#5F5E5A">680</span><br><span class="mut">6批·14车·3.1趟</span></div>
+<div class="cell"><b>B16</b> <span style="color:#5F5E5A">703</span><br><span class="mut">6批·30车·3.2趟</span></div>
+<div class="cell"><b>B15</b> <span style="color:#5F5E5A">712</span><br><span class="mut">6批·24车·3.2趟</span></div>
+<div class="cell"><b>B79</b> <span style="color:#5F5E5A">1076</span><br><span class="mut">6批·24车·3.2趟</span></div>
+<div class="cell"><b>B77</b> <span style="color:#5F5E5A">1292</span><br><span class="mut">6批·14车·3.1趟</span></div>
+<div class="cell"><b>B14</b> <span style="color:#5F5E5A">1327</span><br><span class="mut">6批·18车·3.2趟</span></div>
+<div class="cell"><b>B78</b> <span style="color:#5F5E5A">1465</span><br><span class="mut">6批·18车·3.2趟</span></div>
+</div>
+<h2>D 中间地带 <span class="mut" style="font-weight:400">· 31 题 · 46149 分</span></h2>
+<div class="card" style="border-color:#185FA5;background:#E6F1FB">无明显单一病灶，超时扣分偏重，靠综合调优。</div>
+<div class="grid">
+<div class="cell"><b>B65</b> <span style="color:#A32D2D">151</span><br><span class="mut">10批·14车·5.4趟</span></div>
+<div class="cell"><b>B69</b> <span style="color:#5F5E5A">751</span><br><span class="mut">12批·14车·6.5趟</span></div>
+<div class="cell"><b>B66</b> <span style="color:#5F5E5A">784</span><br><span class="mut">10批·18车·5.6趟</span></div>
+<div class="cell"><b>B22</b> <span style="color:#5F5E5A">1140</span><br><span class="mut">9批·18车·4.9趟</span></div>
+<div class="cell"><b>B73</b> <span style="color:#5F5E5A">1169</span><br><span class="mut">9批·14车·4.8趟</span></div>
+<div class="cell"><b>B61</b> <span style="color:#5F5E5A">1199</span><br><span class="mut">8批·14车·4.4趟</span></div>
+<div class="cell"><b>B20</b> <span style="color:#5F5E5A">1223</span><br><span class="mut">12批·30车·6.6趟</span></div>
+<div class="cell"><b>B74</b> <span style="color:#5F5E5A">1233</span><br><span class="mut">9批·18车·4.9趟</span></div>
+<div class="cell"><b>B47</b> <span style="color:#5F5E5A">1300</span><br><span class="mut">12批·24车·6.5趟</span></div>
+<div class="cell"><b>B29</b> <span style="color:#5F5E5A">1335</span><br><span class="mut">11批·14车·6.0趟</span></div>
+<div class="cell"><b>B9</b> <span style="color:#5F5E5A">1377</span><br><span class="mut">10批·14车·5.4趟</span></div>
+<div class="cell"><b>B40</b> <span style="color:#5F5E5A">1409</span><br><span class="mut">10批·30车·5.5趟</span></div>
+<div class="cell"><b>B75</b> <span style="color:#5F5E5A">1422</span><br><span class="mut">9批·24车·4.8趟</span></div>
+<div class="cell"><b>B21</b> <span style="color:#5F5E5A">1456</span><br><span class="mut">9批·14车·4.8趟</span></div>
+<div class="cell"><b>B38</b> <span style="color:#5F5E5A">1525</span><br><span class="mut">10批·18车·5.6趟</span></div>
+<div class="cell"><b>B64</b> <span style="color:#5F5E5A">1592</span><br><span class="mut">8批·30车·4.4趟</span></div>
+<div class="cell"><b>B76</b> <span style="color:#5F5E5A">1607</span><br><span class="mut">9批·30车·4.9趟</span></div>
+<div class="cell"><b>B57</b> <span style="color:#5F5E5A">1619</span><br><span class="mut">11批·14车·6.0趟</span></div>
+<div class="cell"><b>B8</b> <span style="color:#5F5E5A">1637</span><br><span class="mut">8批·30车·4.4趟</span></div>
+<div class="cell"><b>B37</b> <span style="color:#5F5E5A">1649</span><br><span class="mut">10批·14车·5.4趟</span></div>
+<div class="cell"><b>B2</b> <span style="color:#5F5E5A">1658</span><br><span class="mut">8批·18车·4.4趟</span></div>
+<div class="cell"><b>B1</b> <span style="color:#5F5E5A">1728</span><br><span class="mut">8批·14车·4.4趟</span></div>
+<div class="cell"><b>B34</b> <span style="color:#5F5E5A">1732</span><br><span class="mut">8批·18车·4.4趟</span></div>
+<div class="cell"><b>B17</b> <span style="color:#5F5E5A">1762</span><br><span class="mut">12批·14车·6.5趟</span></div>
+<div class="cell"><b>B45</b> <span style="color:#5F5E5A">1783</span><br><span class="mut">12批·14车·6.5趟</span></div>
+<div class="cell"><b>B18</b> <span style="color:#5F5E5A">1795</span><br><span class="mut">12批·18车·6.6趟</span></div>
+<div class="cell"><b>B30</b> <span style="color:#5F5E5A">1882</span><br><span class="mut">11批·18车·6.1趟</span></div>
+<div class="cell"><b>B33</b> <span style="color:#5F5E5A">1949</span><br><span class="mut">8批·14车·4.4趟</span></div>
+<div class="cell"><b>B62</b> <span style="color:#5F5E5A">1963</span><br><span class="mut">8批·18车·4.4趟</span></div>
+<div class="cell"><b>B48</b> <span style="color:#5F5E5A">2127</span><br><span class="mut">12批·30车·6.6趟</span></div>
+<div class="cell"><b>B31</b> <span style="color:#5F5E5A">2193</span><br><span class="mut">11批·24车·6.0趟</span></div>
+</div>
+<h2>E 健康高分 <span class="mut" style="font-weight:400">· 16 题 · 56275 分</span></h2>
+<div class="card" style="border-color:#3B6D11;background:#EAF3DE">已跑得很好，占全卷 45.6% 分数。冻结，绝不冒险改动。</div>
+<div class="grid">
+<div class="cell"><b>B49</b> <span style="color:#3B6D11">2478</span><br><span class="mut">9批·14车·4.8趟</span></div>
+<div class="cell"><b>B23</b> <span style="color:#3B6D11">2524</span><br><span class="mut">9批·24车·4.8趟</span></div>
+<div class="cell"><b>B11</b> <span style="color:#3B6D11">2560</span><br><span class="mut">10批·24车·5.4趟</span></div>
+<div class="cell"><b>B10</b> <span style="color:#3B6D11">2570</span><br><span class="mut">10批·18车·5.6趟</span></div>
+<div class="cell"><b>B35</b> <span style="color:#3B6D11">2699</span><br><span class="mut">8批·24车·4.3趟</span></div>
+<div class="cell"><b>B12</b> <span style="color:#3B6D11">2730</span><br><span class="mut">10批·30车·5.5趟</span></div>
+<div class="cell"><b>B70</b> <span style="color:#3B6D11">2732</span><br><span class="mut">12批·18车·6.6趟</span></div>
+<div class="cell"><b>B58</b> <span style="color:#3B6D11">2761</span><br><span class="mut">11批·18车·6.1趟</span></div>
+<div class="cell"><b>B7</b> <span style="color:#3B6D11">2770</span><br><span class="mut">8批·24车·4.3趟</span></div>
+<div class="cell"><b>B46</b> <span style="color:#3B6D11">2800</span><br><span class="mut">12批·18车·6.6趟</span></div>
+<div class="cell"><b>B5</b> <span style="color:#3B6D11">3164</span><br><span class="mut">8批·14车·4.4趟</span></div>
+<div class="cell"><b>B6</b> <span style="color:#3B6D11">3538</span><br><span class="mut">8批·18车·4.4趟</span></div>
+<div class="cell"><b>B51</b> <span style="color:#3B6D11">3622</span><br><span class="mut">9批·24车·4.8趟</span></div>
+<div class="cell"><b>B50</b> <span style="color:#3B6D11">5251</span><br><span class="mut">9批·18车·4.9趟</span></div>
+<div class="cell"><b>B3</b> <span style="color:#3B6D11">6429</span><br><span class="mut">8批·24车·4.3趟</span></div>
+<div class="cell"><b>B4</b> <span style="color:#3B6D11">7648</span><br><span class="mut">8批·30车·4.4趟</span></div>
+</div>
+<h2>优先级结论</h2><table><tr><th>优先级</th><th>目标</th><th>题数</th><th>现状分</th><th>对标</th><th>潜在增量</th></tr>
+<tr><td>1 最高</td><td>A 七批崩溃</td><td>8</td><td>1071</td><td>8批均分 2555</td><td class="pos">+19369</td></tr>
+<tr><td>2 次高</td><td>C 车多堵死</td><td>13</td><td>10384</td><td>全卷均分 1542</td><td class="pos">+9662</td></tr>
+<tr><td>3 谨慎</td><td>D 中间地带</td><td>31</td><td>46149</td><td>逐题看</td><td class="mut">综合调优</td></tr>
+<tr><td>冻结</td><td>E 健康高分</td><td>16</td><td>56275</td><td>占全卷 45.6%</td><td class="neg">不要动</td></tr>
+</table></div></body></html>

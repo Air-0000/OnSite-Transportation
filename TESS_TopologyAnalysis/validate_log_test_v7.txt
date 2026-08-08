@@ -1,0 +1,17 @@
+抽样场景: [4]
+模式顺序: ['ring']  (依次跑, 一次一个仿真)
+
+########## 模式 ring -> test_v7 ##########
+  [输入] B4 vehicle.csv -> 30,60
+
+[21:10] B4 开始 (run_timeout=7200s, stale_wall=900s)
+  B4 子进程正常退出 rc=0
+  完成 B4: 产物已保存到 E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\test_v7\B4 (分数由网页给出)
+B4    8     产物已产出 -> test_v7/B4
+[ring] 新产出 1 题, 跳过 0 题
+[ring] 产物目录: E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\test_v7
+[ring] 下一步: pack_submit.py E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\test_v7 压缩后提交网页评分
+
+===== 全部模式产物产出完成, 耗时 1286s =====
+⚠️ 本脚本不本地算分。请用 pack_submit.py 把各 test_vN/ 压缩提交网页,
+   下载官方 score.csv 后, 用 compare_scores.py 横向比较版本择优。

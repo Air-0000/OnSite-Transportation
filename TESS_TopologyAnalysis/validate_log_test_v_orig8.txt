@@ -1,0 +1,17 @@
+抽样场景: [5]
+模式顺序: ['orig8']  (依次跑, 一次一个仿真)
+
+########## 模式 orig8 -> test_v_orig8 ##########
+  [输入] B5 vehicle.csv -> 14,60
+
+[10:32] B5 开始 (run_timeout=7200s, stale_wall=900s)
+  B5 子进程正常退出 rc=0
+  完成 B5: 产物已保存到 E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\test_v_orig8\B5 (分数由网页给出)
+B5    8     产物已产出 -> test_v_orig8/B5
+[orig8] 新产出 1 题, 跳过 0 题
+[orig8] 产物目录: E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\test_v_orig8
+[orig8] 下一步: pack_submit.py E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\test_v_orig8 压缩后提交网页评分
+
+===== 全部模式产物产出完成, 耗时 1366s =====
+⚠️ 本脚本不本地算分。请用 pack_submit.py 把各 test_vN/ 压缩提交网页,
+   下载官方 score.csv 后, 用 compare_scores.py 横向比较版本择优。

@@ -1,0 +1,12 @@
+抽样场景: [2]
+模式顺序: ['optimized']  (依次跑, 一次一个仿真)
+
+########## 模式 optimized -> clean_2_optimized_r1 ##########
+B2    8     跳过(产物已存在) -> clean_2_optimized_r1/B2
+[optimized] 新产出 0 题, 跳过 1 题
+[optimized] 产物目录: E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\clean_2_optimized_r1
+[optimized] 下一步: pack_submit.py E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\clean_2_optimized_r1 压缩后提交网页评分
+
+===== 全部模式产物产出完成, 耗时 0s =====
+[注意] 本脚本不本地算分。请用 pack_submit.py 把各 test_vN/ 压缩提交网页,
+   下载官方 score.csv 后, 用 compare_scores.py 横向比较版本择优。

@@ -1,0 +1,17 @@
+抽样场景: [77]
+模式顺序: ['optimized']  (依次跑, 一次一个仿真)
+
+########## 模式 optimized -> clean_77_optimized_r2 ##########
+  [输入] B77 vehicle.csv -> 14,60
+
+[16:43] B77 开始 (run_timeout=7200s, stale_wall=900s)
+  B77 子进程正常退出 rc=0
+  完成 B77: 产物已保存到 E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\clean_77_optimized_r2\B77 (分数由网页给出)
+B77   6     产物已产出 -> clean_77_optimized_r2/B77
+[optimized] 新产出 1 题, 跳过 0 题
+[optimized] 产物目录: E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\clean_77_optimized_r2
+[optimized] 下一步: pack_submit.py E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\clean_77_optimized_r2 压缩后提交网页评分
+
+===== 全部模式产物产出完成, 耗时 1386s =====
+[注意] 本脚本不本地算分。请用 pack_submit.py 把各 test_vN/ 压缩提交网页,
+   下载官方 score.csv 后, 用 compare_scores.py 横向比较版本择优。

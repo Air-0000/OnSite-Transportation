@@ -1,0 +1,29 @@
+optimized(spread) 验证场景: [25, 26, 27, 28]  (ASSIGN_MODE=optimized -> E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\test_opt)
+  [输入] B25 vehicle.csv -> 14,60
+
+[17:19] B25 开始 (run_timeout=7200s, stale_wall=300s)
+  B25 子进程正常退出 rc=0
+  完成 B25: 产物已保存到 E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\test_opt\B25 (分数由网页给出)
+B25 ok=True
+  [输入] B26 vehicle.csv -> 18,60
+
+[17:26] B26 开始 (run_timeout=7200s, stale_wall=300s)
+  B26 子进程正常退出 rc=0
+  完成 B26: 产物已保存到 E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\test_opt\B26 (分数由网页给出)
+B26 ok=True
+  [输入] B27 vehicle.csv -> 24,60
+
+[17:31] B27 开始 (run_timeout=7200s, stale_wall=300s)
+  B27 子进程正常退出 rc=0
+  完成 B27: 产物已保存到 E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\test_opt\B27 (分数由网页给出)
+B27 ok=True
+  [输入] B28 vehicle.csv -> 30,60
+
+[17:36] B28 开始 (run_timeout=7200s, stale_wall=300s)
+  B28 子进程正常退出 rc=0
+  完成 B28: 产物已保存到 E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\test_opt\B28 (分数由网页给出)
+B28 ok=True
+
+===== optimized 验证完成, 耗时 1329s -> E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI\test_opt =====
+成功: [25, 26, 27, 28]   失败: []
+下一步: pack_submit.py test_opt -> upload_submit.py 提交网页 -> 对比 test/score.csv 的 B25-B28
