@@ -16,7 +16,7 @@ import os
 import sys
 import zipfile
 
-BASE = r"E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI"
+BASE = os.path.dirname(os.path.abspath(__file__)) if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)), "main.py")) else r"E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI"
 
 REQUIRED = ["id.csv", "operation_state.csv", "penalty.csv"]
 OPTIONAL = ["task.csv"]

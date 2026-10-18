@@ -21,12 +21,12 @@ r"""
 import csv, os, shutil, subprocess, sys, time
 from collections import defaultdict
 
-BASE      = r"E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI"
+BASE      = os.path.dirname(os.path.abspath(__file__)) if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)), "main.py")) else r"E:\Desktop\dev\OnSite-Transportation\TESS_PythonAPI"
 TEST_NEW  = os.path.join(BASE, "test", "new_test")
-INPUT     = r"E:\Desktop\dev\OnSite-Transportation\Test Paper B\B"
+INPUT     = os.environ.get("ONSITE_INPUT", r"E:\Desktop\dev\OnSite-Transportation\Test Paper B\B")
 # 旧分数仅用于筛选低分题/参考, 不参与本地评分
-SCORE_CSV = os.path.join(os.path.dirname(BASE), "score.csv")  # SSoT 权威全量分(根目录)
-PYTHON    = r"D:\Environment\anaconda3\envs\onsite2\python.exe"
+SCORE_CSV = os.path.join(BASE, "score.csv") if os.path.exists(os.path.join(BASE, "score.csv")) else os.path.join(os.path.dirname(BASE), "score.csv")  # SSoT 权威全量分(根目录)
+PYTHON    = os.environ.get("ONSITE_PYTHON", r"D:\Environment\anaconda3\envs\onsite2\python.exe")
 KILL_TESS = r"C:\Users\Administrator\AppData\Local\Temp\kill_tess_only.ps1"
 MAIN_PY   = os.path.join(BASE, "main.py")
 MAX_TIME  = 3600
